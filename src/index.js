@@ -9,8 +9,8 @@ import AboutContainer from './containers/About'
 
 const Portfolio = () => (
     <HashRouter>
-        <Route path='/' component={AboutContainer}/>
-        <Route path='/about' component={HomeContainer} />
+        <Route path='/' component={HomeContainer} />
+        <Route path='/about' component={AboutContainer}/>
     </HashRouter>
 )
 
