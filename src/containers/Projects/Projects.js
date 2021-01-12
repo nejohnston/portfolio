@@ -2,7 +2,7 @@ import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
 
 import IntroCard from "../../components/IntroCard";
-import ProjectsList from '../../components/ProjectsList/ProjectsList'
+import ProjectsList from '../../components/ProjectsList'
 
 const useStyles = makeStyles({
   cardContainer: {

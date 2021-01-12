@@ -1,3 +1,3 @@
-import ProjectCard from './ProjectCard'
+import ProjectsList from './ProjectsList'
 
-export default ProjectCard
+export default ProjectsList
