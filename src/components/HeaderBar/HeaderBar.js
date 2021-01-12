@@ -7,14 +7,14 @@ import {
   Typography,
   Menu,
   MenuItem,
-  IconButton
+  IconButton,
+  makeStyles
 } from '@material-ui/core';
-import { withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import HomeIcon from '@material-ui/icons/Home';
 import {NavLink} from 'react-router-dom'
 
-const styles = {
+const useStyles = makeStyles({
   headerContainer: {
     alignItems: 'center',
     backgroundColor: 'transparent',
@@ -31,18 +31,10 @@ const styles = {
     display: 'flex',
     flexDirection: 'row'
   }
-};
+});
 
-const Loader = () => (
-  <div className='loader triangle'>
-    <svg viewBox='0 0 81 75'>
-      <polygon points='38 3 74 67 2 67' />
-    </svg>
-  </div>
-);
-
-const HeaderBar = (props, window) => {
-  const { classes } = props;
+const HeaderBar = () => {
+  const classes = useStyles();
 
   const [ anchorEl, setAnchorEl ] = React.useState(null);
 
@@ -54,7 +46,6 @@ const HeaderBar = (props, window) => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  console.log(window);
   return (
     <div>
       <AppBar
@@ -63,14 +54,8 @@ const HeaderBar = (props, window) => {
         className={classes.headerContainer}
       >
         <Toolbar className={classes.header}>
-          <div className={classes.iconTitleContainer}>
-            {props.window < 769 ? (
-              <NavLink to='/' spy={true} smooth={true} offset={-70} duration={750}>
-                <Loader />
-              </NavLink>
-            ) : (
+            
               <div className={classes.iconTitleContainer}>
-                <Loader />
                 <NavLink
                   to='/'
                   spy={true}
@@ -78,17 +63,12 @@ const HeaderBar = (props, window) => {
                   offset={-70}
                   duration={750}
                 >
-                  <Typography
-                    variant='h5'
-                    component='h5'
-                    style={{ color: '#fff' }}
+                  <IconButton
                   >
                     <HomeIcon/>
-                  </Typography>
+                  </IconButton>
                 </NavLink>
               </div>
-            )}
-          </div>
           <IconButton
             aria-controls='simple-menu'
             aria-haspopup='true'
@@ -139,4 +119,4 @@ HeaderBar.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(HeaderBar);
+export default HeaderBar;
