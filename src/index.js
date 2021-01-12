@@ -5,11 +5,13 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import HomeContainer from "./containers/Home";
 import AboutContainer from './containers/About'
+import ProjectsContainer from './containers/Projects'
 
 const Portfolio = () => (
     <HashRouter>
         <Route exact path='/' component={HomeContainer} />
         <Route path='/about' component={AboutContainer}/>
+        <Route path='/projects' component={ProjectsContainer}/> 
     </HashRouter>
 )
 
