@@ -46,7 +46,9 @@ const IntroCard = () => {
         <NavLink to='/about'>
           <Button size="small">About</Button>
         </NavLink>
-        <Button size="small">Projects</Button>
+        <NavLink to='/projects'>
+          <Button size="small">Projects</Button>
+        </NavLink>
       </CardActions>
     </Card>
   );
