@@ -44,9 +44,9 @@ const IntroCard = () => {
       </CardContent>
       <CardActions className={classes.buttonContainer}>
         <NavLink to='/about'>
-          <Button size="small">Projects</Button>
+          <Button size="small">About</Button>
         </NavLink>
-        <Button size="small">About</Button>
+        <Button size="small">Projects</Button>
       </CardActions>
     </Card>
   );
