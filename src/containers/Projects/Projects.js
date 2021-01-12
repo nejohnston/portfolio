@@ -1,6 +1,8 @@
 import React from "react";
-import IntroCard from "../../components/IntroCard";
 import {makeStyles} from "@material-ui/core/styles";
+
+import IntroCard from "../../components/IntroCard";
+import ProjectsList from '../../components/ProjectsList/ProjectsList'
 
 const useStyles = makeStyles({
   cardContainer: {
@@ -17,6 +19,7 @@ const Projects = () => {
     return(
         <div className={classes.cardContainer}>
             <IntroCard/>
+            <ProjectsList />
         </div>
     )
 }

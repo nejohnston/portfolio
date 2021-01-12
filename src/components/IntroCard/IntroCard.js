@@ -5,7 +5,8 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import {NavLink, Route} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
+import axios from 'axios'
 
 const useStyles = makeStyles({
   root: {
@@ -26,6 +27,22 @@ const useStyles = makeStyles({
 
 const IntroCard = () => {
   const classes = useStyles();
+
+  // const Form = props => {
+  //   const [username, setUsername] = useState('')
+  
+    const HandleSubmit = event => {
+        axios.get(`https://api.github.com/users/nejohnston`)
+        .then(resp => {
+          console.log(resp.data)
+        })
+        axios
+          .get(`https://api.github.com/users/nejohnston/repos`)
+          .then(resp => {
+            console.log(resp.data)
+          })
+    }
+    console.log(HandleSubmit())
 
   return (
     <Card className={classes.root} variant="outlined">
