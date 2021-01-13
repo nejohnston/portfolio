@@ -7,7 +7,8 @@ class ProjectsContainer extends Component {
   constructor(props){
     super(props)
     this.state = { 
-      projects: ""
+      projects: [],
+      requested: ["covid-map", "boomtown", "building-assets", "freestyle"]
     }
   }
 
@@ -18,12 +19,10 @@ class ProjectsContainer extends Component {
         .then((resp) => resp.data)
         .then(projectsList => {
           this.setState({projects: projectsList})
-          
         });
   }
   
     render() {
-      console.log(this.state.projects)
         return (
             <Projects projects={this.state.projects} />
         );

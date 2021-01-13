@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     overflow: 'hidden'
   },
   gridList: {
@@ -40,31 +40,29 @@ const useStyles = makeStyles((theme) => ({
  *   },
  * ];
  */
-const ProjectsList = () => {
+const ProjectsList = ({projects}) => {
   const classes = useStyles();
-
   return (
     <div className={classes.root}>
-      {/* <GridList cellHeight={180} className={classes.gridList}>
+      <GridList cellHeight={180} className={classes.gridList}>
         <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-          <ListSubheader component="div">December</ListSubheader>
+          <ListSubheader component="div">Projects</ListSubheader>
         </GridListTile>
-        {tileData.map((tile) => (
-          <GridListTile key={tile.img}>
-            <img src={tile.img} alt={tile.title} />
+        {projects.map((project) => (
+          <GridListTile key={project.node_id}>
+            <img src={project.img} alt={project.title} />
             <GridListTileBar
-              title={tile.title}
-              subtitle={<span>by: {tile.author}</span>}
+              title={project.name.replace('-', ' ').replace(/^(.)|\s+(.)/g, c => c.toUpperCase())}
+              subtitle={<span>Language: {project.language}</span>}
               actionIcon={
-                <IconButton aria-label={`info about ${tile.title}`} className={classes.icon}>
+                <IconButton aria-label={`info about ${project.title}`} className={classes.icon}>
                   <InfoIcon />
                 </IconButton>
               }
             />
           </GridListTile>
         ))}
-      </GridList> */}
-      hello
+      </GridList>
     </div>
   );
 }
