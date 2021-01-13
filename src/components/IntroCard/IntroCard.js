@@ -28,22 +28,6 @@ const useStyles = makeStyles({
 const IntroCard = () => {
   const classes = useStyles();
 
-  // const Form = props => {
-  //   const [username, setUsername] = useState('')
-  
-    const HandleSubmit = event => {
-        axios.get(`https://api.github.com/users/nejohnston`)
-        .then(resp => {
-          console.log(resp.data)
-        })
-        axios
-          .get(`https://api.github.com/users/nejohnston/repos`)
-          .then(resp => {
-            console.log(resp.data)
-          })
-    }
-    console.log(HandleSubmit())
-
   return (
     <Card className={classes.root} variant="outlined">
       <CardContent>

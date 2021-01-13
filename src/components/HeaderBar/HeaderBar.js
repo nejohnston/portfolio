@@ -58,8 +58,6 @@ const HeaderBar = () => {
               <div className={classes.iconTitleContainer}>
                 <NavLink
                   to='/'
-                  spy={true}
-                  smooth={true}
                   offset={-70}
                   duration={750}
                 >
@@ -72,7 +70,6 @@ const HeaderBar = () => {
           <IconButton
             aria-controls='simple-menu'
             aria-haspopup='true'
-            // color='#2f3545'
             onClick={handleClick}
           >
             <MenuIcon />
@@ -87,8 +84,6 @@ const HeaderBar = () => {
             <MenuItem>
               <NavLink
                 to='about'
-                spy={true}
-                smooth={true}
                 offset={-70}
                 duration={750}
                 onClick={handleClose}
@@ -99,8 +94,6 @@ const HeaderBar = () => {
             <MenuItem>
               <NavLink
                 to='projects'
-                spy={true}
-                smooth={true}
                 offset={-70}
                 duration={750}
                 onClick={handleClose}
@@ -113,10 +106,6 @@ const HeaderBar = () => {
       </AppBar>
     </div>
   );
-};
-
-HeaderBar.propTypes = {
-  classes: PropTypes.object.isRequired
 };
 
 export default HeaderBar;

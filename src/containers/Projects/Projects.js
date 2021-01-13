@@ -14,12 +14,13 @@ const useStyles = makeStyles({
   }
 });
 
-const Projects = () => {
+const Projects = (projects) => {
     const classes = useStyles()
+    console.log(projects)
     return(
         <div className={classes.cardContainer}>
             <IntroCard/>
-            <ProjectsList />
+            {/* <ProjectsList /> */}
         </div>
     )
 }
