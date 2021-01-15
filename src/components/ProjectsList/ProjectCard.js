@@ -4,6 +4,7 @@ import GridListTileBar from '@material-ui/core/GridListTileBar';
 import GridListTile from '@material-ui/core/GridList'
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
+import LanguageIcon from '@material-ui/icons/Language'
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -15,7 +16,7 @@ const useStyles = makeStyles({
   cardContainer: {
     minWidth: 275,
     maxWidth: 500,
-    height: 180
+    // height: 1
   },
   cardContent: {
     height: 180
@@ -31,7 +32,7 @@ const useStyles = makeStyles({
   //   justifyContent: 'space-around'
   // },
   icon: {
-    color: 'rgba(255, 255, 255, 0.54)',
+    color: 'rgba(0, 0, 0, 0.54)',
   },
   // gridList: {
   //   width: 800,
@@ -89,6 +90,7 @@ const IntroCard = ({project}) => {
           <Button size="small">Projects</Button>
         </NavLink>
       </CardActions>
+      {project.link ? <IconButton href={project.link} className={classes.icon}><LanguageIcon/></IconButton> : false}
     </Card>
   );
 }
