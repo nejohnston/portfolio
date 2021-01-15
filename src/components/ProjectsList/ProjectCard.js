@@ -11,15 +11,12 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import {NavLink} from 'react-router-dom'
-
+import {AiFillGithub} from 'react-icons/ai'
 const useStyles = makeStyles({
   cardContainer: {
     minWidth: 275,
     maxWidth: 500,
-    // height: 1
-  },
-  cardContent: {
-    height: 180
+    height: "auto"
   },
   // title: {
   //   fontSize: 30,
@@ -83,14 +80,10 @@ const IntroCard = ({project}) => {
         </Typography>
       </CardContent>
       <CardActions className={classes.buttonContainer}>
-        <NavLink to='/about'>
-          <Button size="small">About</Button>
-        </NavLink>
-        <NavLink to='/projects'>
-          <Button size="small">Projects</Button>
-        </NavLink>
-      </CardActions>
+      <IconButton href={project.github} className={classes.icon}><AiFillGithub/></IconButton>
       {project.link ? <IconButton href={project.link} className={classes.icon}><LanguageIcon/></IconButton> : false}
+      </CardActions>
+      
     </Card>
   );
 }
