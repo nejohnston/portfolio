@@ -71,12 +71,10 @@ const IntroCard = ({project}) => {
           {project.title}
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
-          adjective
+          {project.language}
         </Typography>
         <Typography variant="body2" component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
+          {project.description}
         </Typography>
       </CardContent>
       <CardActions className={classes.buttonContainer}>
