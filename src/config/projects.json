@@ -1,0 +1,50 @@
+{
+  "0": {
+    "title": "StudentsAgainstCorona Map",
+    "language": ["Javascript", "Firebase", "Leaflet"],
+    "image": "./assets/portfolio-sacmap",
+    "description": "",
+    "link": "https://againstcoronamap.web.app/",
+    "github": "https://github.com/nejohnston/covid-map"
+  },
+  "1": {
+    "title": "",
+    "language": "",
+    "image": "",
+    "description": "",
+    "link": "",
+    "github": ""
+  },
+  "2": {
+    "title": "",
+    "language": "",
+    "image": "",
+    "description": "",
+    "link": "",
+    "github": ""
+  },
+  "3": {
+    "title": "",
+    "language": "",
+    "image": "",
+    "description": "",
+    "link": "",
+    "github": ""
+  },
+  "4": {
+    "title": "",
+    "language": "",
+    "image": "",
+    "description": "",
+    "link": "",
+    "github": ""
+  },
+  "5": {
+    "title": "",
+    "language": "",
+    "image": "",
+    "description": "",
+    "link": "",
+    "github": ""
+  }
+}

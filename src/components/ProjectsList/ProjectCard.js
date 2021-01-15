@@ -12,10 +12,14 @@ import Typography from '@material-ui/core/Typography';
 import {NavLink} from 'react-router-dom'
 
 const useStyles = makeStyles({
-  // root: {
-  //   minWidth: 275,
-  //   maxWidth: 500
-  // },
+  cardContainer: {
+    minWidth: 275,
+    maxWidth: 500,
+    height: 180
+  },
+  cardContent: {
+    height: 180
+  },
   // title: {
   //   fontSize: 30,
   // },
@@ -29,6 +33,10 @@ const useStyles = makeStyles({
   icon: {
     color: 'rgba(255, 255, 255, 0.54)',
   },
+  // gridList: {
+  //   width: 800,
+  //   height: 600
+  // },
 });
 
 const IntroCard = ({project}) => {
@@ -58,18 +66,30 @@ const IntroCard = ({project}) => {
     //     </NavLink>
     //   </CardActions>
     // </Card>
-    <GridListTile key={project.node_id}>
-            <img src={project.img} alt={project.title} />
-            <GridListTileBar
-              title={project.title}
-              subtitle={<span>by: {project.author}</span>}
-              actionIcon={
-                <IconButton aria-label={`info about ${project.title}`} className={classes.icon}>
-                  <InfoIcon />
-                </IconButton>
-              }
-            />
-          </GridListTile>
+    // <GridListTile className={classes.cardContainer} key={project.node_id}>
+            <Card className={classes.root} variant="outlined">
+      <CardContent className={classes.cardContent}>
+        <Typography className={classes.title} color="textPrimary" gutterBottom>
+          {project.title}
+        </Typography>
+        <Typography className={classes.pos} color="textSecondary">
+          adjective
+        </Typography>
+        <Typography variant="body2" component="p">
+          well meaning and kindly.
+          <br />
+          {'"a benevolent smile"'}
+        </Typography>
+      </CardContent>
+      <CardActions className={classes.buttonContainer}>
+        <NavLink to='/about'>
+          <Button size="small">About</Button>
+        </NavLink>
+        <NavLink to='/projects'>
+          <Button size="small">Projects</Button>
+        </NavLink>
+      </CardActions>
+    </Card>
   );
 }
 

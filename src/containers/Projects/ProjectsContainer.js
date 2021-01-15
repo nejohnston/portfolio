@@ -23,6 +23,7 @@ class ProjectsContainer extends Component {
   }
   
     render() {
+      console.log(this.state.projects)
         return (
             <Projects projects={this.state.projects} />
         );

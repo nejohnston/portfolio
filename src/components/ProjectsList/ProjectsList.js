@@ -6,6 +6,9 @@ import GridListTileBar from '@material-ui/core/GridListTileBar';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
+import { Typography } from '@material-ui/core';
+import IntroCard from '../IntroCard'
+import ProjectCard from './ProjectCard'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'hidden'
   },
   gridList: {
-    width: 500,
-    height: 450,
+    // width: 800,
+    height: 600
   },
   icon: {
     color: 'rgba(255, 255, 255, 0.54)',
@@ -44,22 +47,30 @@ const ProjectsList = ({projects}) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <GridList cellHeight={180} className={classes.gridList}>
-        <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+      <GridList cols={4} spacing={30} cellHeight={180} className={classes.gridList}>
+        {/* <GridListTile key="Subheader" style={{ height: 'auto' }}>
           <ListSubheader component="div">Projects</ListSubheader>
-        </GridListTile>
+        </GridListTile> */}
         {projects.map((project) => (
+          // <GridListTile key={project.node_id}>
+          //   {/* <img src={project.img} alt={project.title} /> */}
+          //   <GridListTileBar
+          //     title={project.name.replace('-', ' ').replace(/^(.)|\s+(.)/g, c => c.toUpperCase())}
+          //     subtitle={<span>Language: {project.language}</span>}
+          //     actionIcon={
+          //       <IconButton aria-label={`info about ${project.title}`} className={classes.icon}>
+          //         <InfoIcon />
+          //       </IconButton>
+          //     }
+          //   />
+          //   <GridListTileBar>
+          //     <Typography>
+          //       {project.description}
+          //     </Typography>
+          //   </GridListTileBar>
           <GridListTile key={project.node_id}>
-            <img src={project.img} alt={project.title} />
-            <GridListTileBar
-              title={project.name.replace('-', ' ').replace(/^(.)|\s+(.)/g, c => c.toUpperCase())}
-              subtitle={<span>Language: {project.language}</span>}
-              actionIcon={
-                <IconButton aria-label={`info about ${project.title}`} className={classes.icon}>
-                  <InfoIcon />
-                </IconButton>
-              }
-            />
+          <ProjectCard project={project}/>
+            
           </GridListTile>
         ))}
       </GridList>
