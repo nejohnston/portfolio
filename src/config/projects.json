@@ -1,5 +1,5 @@
-{
-  "0": {
+[
+  {
     "title": "StudentsAgainstCorona Map",
     "language": ["Javascript", "Firebase", "Leaflet"],
     "image": "./assets/portfolio-sacmap",
@@ -7,7 +7,15 @@
     "link": "https://againstcoronamap.web.app/",
     "github": "https://github.com/nejohnston/covid-map"
   },
-  "1": {
+  {
+    "title": "R10",
+    "language": "React Native, Firebase",
+    "image": "./assets/portfolio-R10",
+    "description": "React Native project for a RED Academy conference. Uses Redux state manager, Firebase database.",
+    "link": "",
+    "github": ""
+  },
+  {
     "title": "",
     "language": "",
     "image": "",
@@ -15,7 +23,7 @@
     "link": "",
     "github": ""
   },
-  "2": {
+  {
     "title": "",
     "language": "",
     "image": "",
@@ -23,7 +31,7 @@
     "link": "",
     "github": ""
   },
-  "3": {
+  {
     "title": "",
     "language": "",
     "image": "",
@@ -31,15 +39,7 @@
     "link": "",
     "github": ""
   },
-  "4": {
-    "title": "",
-    "language": "",
-    "image": "",
-    "description": "",
-    "link": "",
-    "github": ""
-  },
-  "5": {
+  {
     "title": "",
     "language": "",
     "image": "",
@@ -47,4 +47,4 @@
     "link": "",
     "github": ""
   }
-}
+]
