@@ -1,8 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {Card, CardActions, CardContent, Button, IconButton, Typography} from '@material-ui/core';
+import {Card, CardActions, CardContent, Button, IconButton, Typography, CardHeader, CardMedia} from '@material-ui/core';
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai';
 import {NavLink} from 'react-router-dom'
+import profilePicture from '../../config/assets/images/profile_picture.png'
 
 const useStyles = makeStyles({
   root: {
@@ -10,10 +11,17 @@ const useStyles = makeStyles({
     maxWidth: 500,
   },
   cardContent: {
-    maxWidth: 350
+    // maxWidth: 350,
+    marginBottom: 0,
+    padding: 0
   },
   title: {
     fontSize: 30,
+    textAlign: 'center'
+  },
+  media: {
+    height: 0,
+    paddingTop: '56.25%', // 16:9
   },
   pos: {
     marginBottom: 12,
@@ -35,23 +43,26 @@ const IntroCard = () => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root} variant="outlined">
+    <Card 
+    className={classes.root} 
+    variant="outlined"
+    >
       <CardContent className={classes.cardContent}>
-        <Typography className={classes.title} color="textPrimary" gutterBottom>
-          Hi, my name is Nicholas
+        <CardMedia
+        className={classes.media} 
+        image={profilePicture}
+        />
+        <Typography 
+        className={classes.title} 
+        color="textPrimary"
+        >
+          Nicholas Johnston
         </Typography>
-        <Typography color="textSecondary">
+        {/* </CardHeader> */}
+        {/* <Typography color="textSecondary">
           I'm passionate about snowboarding, coding, and my grandma's buttertarts!
-        </Typography>
+        </Typography> */}
       </CardContent>
-      <div className={classes.buttonContainer}>
-        <IconButton href="https://github.com/nejohnston/"  size="medium">
-          <AiFillGithub className={classes.icon}/>
-        </IconButton>
-        <IconButton href="https://www.linkedin.com/in/n-johnston/" size="medium">
-          <AiFillLinkedin className={classes.icon}/>
-        </IconButton>
-      </div>
       <CardActions className={classes.buttonContainer}>
         <NavLink to='/about' className={classes.linkText}>
           <Button size="small">About</Button>
@@ -60,6 +71,14 @@ const IntroCard = () => {
           <Button size="small">Projects</Button>
         </NavLink>
       </CardActions>
+      <div className={classes.buttonContainer}>
+        <IconButton href="https://github.com/nejohnston/"  size="medium">
+          <AiFillGithub className={classes.icon}/>
+        </IconButton>
+        <IconButton href="https://www.linkedin.com/in/n-johnston/" size="medium">
+          <AiFillLinkedin className={classes.icon}/>
+        </IconButton>
+      </div>
     </Card>
   );
 }
