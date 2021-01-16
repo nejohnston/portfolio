@@ -3,24 +3,25 @@ import { makeStyles } from '@material-ui/core/styles';
 import {Card, CardActions, CardContent, Button, IconButton, Typography, CardHeader, CardMedia} from '@material-ui/core';
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai';
 import {NavLink} from 'react-router-dom'
-import profilePicture from '../../config/assets/images/profile_picture.png'
+import profilePicture from '../../config/assets/images/sadie-and-i.png'
 
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
-    maxWidth: 500,
+    width: 400,
   },
   cardContent: {
-    // maxWidth: 350,
+    // maxWidth: 500,
     marginBottom: 0,
     padding: 0
   },
   title: {
     fontSize: 30,
-    textAlign: 'center'
+    textAlign: 'center',
+    marginTop: 10
   },
   media: {
-    height: 0,
+    height: 100,
     paddingTop: '56.25%', // 16:9
   },
   pos: {
@@ -58,17 +59,16 @@ const IntroCard = () => {
         >
           Nicholas Johnston
         </Typography>
-        {/* </CardHeader> */}
         {/* <Typography color="textSecondary">
           I'm passionate about snowboarding, coding, and my grandma's buttertarts!
         </Typography> */}
       </CardContent>
       <CardActions className={classes.buttonContainer}>
-        <NavLink to='/about' className={classes.linkText}>
-          <Button size="small">About</Button>
-        </NavLink>
         <NavLink to='/projects' className={classes.linkText}>
           <Button size="small">Projects</Button>
+        </NavLink>
+        <NavLink to='/about' className={classes.linkText}>
+          <Button size="small">About</Button>
         </NavLink>
       </CardActions>
       <div className={classes.buttonContainer}>
