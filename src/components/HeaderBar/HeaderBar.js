@@ -30,6 +30,11 @@ const useStyles = makeStyles({
   iconTitleContainer: {
     display: 'flex',
     flexDirection: 'row'
+  },
+  linkText: {
+    textDecoration: "none",
+    textTransform: "uppercase",
+    color: "rgba(0, 0, 0, 0.87)"
   }
 });
 
@@ -87,6 +92,7 @@ const HeaderBar = () => {
                 offset={-70}
                 duration={750}
                 onClick={handleClose}
+                className={classes.linkText}
               >
                 About
               </NavLink>
@@ -97,6 +103,7 @@ const HeaderBar = () => {
                 offset={-70}
                 duration={750}
                 onClick={handleClose}
+                className={classes.linkText}
               >
                 Projects
               </NavLink>

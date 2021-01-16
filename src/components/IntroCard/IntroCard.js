@@ -41,7 +41,7 @@ const IntroCard = () => {
           Hi, my name is Nicholas
         </Typography>
         <Typography color="textSecondary">
-          I'm passionate about snowboarding, coding, and my grandma's buttertarts.
+          I'm passionate about snowboarding, coding, and my grandma's buttertarts!
         </Typography>
       </CardContent>
       <div className={classes.buttonContainer}>
