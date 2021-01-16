@@ -1,12 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import {Card, CardActions, CardContent, Button, IconButton, Typography} from '@material-ui/core';
+import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai';
 import {NavLink} from 'react-router-dom'
-import axios from 'axios'
 
 const useStyles = makeStyles({
   root: {
@@ -35,14 +31,15 @@ const IntroCard = () => {
           Hi, my name is Nicholas
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
-          adjective
-        </Typography>
-        <Typography variant="body2" component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
+          I'm passionate about snowboarding, coding, and my grandma's buttertarts.
         </Typography>
       </CardContent>
+      <IconButton href="https://github.com/nejohnston/">
+        <AiFillGithub/>
+      </IconButton>
+      <IconButton href="https://www.linkedin.com/in/n-johnston/">
+        <AiFillLinkedin/>
+      </IconButton>
       <CardActions className={classes.buttonContainer}>
         <NavLink to='/about'>
           <Button size="small">About</Button>

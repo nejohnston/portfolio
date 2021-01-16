@@ -5,7 +5,7 @@
     "image": "./assets/portfolio-sacmap",
     "description": "",
     "link": "https://againstcoronamap.web.app/",
-    "github": "https://github.com/nejohnston/covid-map"
+    "github": "çcovid-map"
   },
   {
     "title": "R10",
@@ -13,7 +13,7 @@
     "image": "./assets/portfolio-R10",
     "description": "React Native project for a RED Academy conference. Uses Redux state manager, Firebase database.",
     "link": "",
-    "github": ""
+    "github": "https://github.com/nejohnston/R10"
   },
   {
     "title": "",

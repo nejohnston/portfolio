@@ -41,47 +41,22 @@ const IntroCard = ({project}) => {
   const classes = useStyles();
 
   return (
-    // <Card className={classes.root} variant="outlined">
-    //   <CardContent>
-    //     <Typography className={classes.title} color="textPrimary" gutterBottom>
-    //       Hi, my name is Nicholas
-    //     </Typography>
-    //     <Typography className={classes.pos} color="textSecondary">
-    //       adjective
-    //     </Typography>
-    //     <Typography variant="body2" component="p">
-    //       well meaning and kindly.
-    //       <br />
-    //       {'"a benevolent smile"'}
-    //     </Typography>
-    //   </CardContent>
-    //   <CardActions className={classes.buttonContainer}>
-    //     <NavLink to='/about'>
-    //       <Button size="small">About</Button>
-    //     </NavLink>
-    //     <NavLink to='/projects'>
-    //       <Button size="small">Projects</Button>
-    //     </NavLink>
-    //   </CardActions>
-    // </Card>
-    // <GridListTile className={classes.cardContainer} key={project.node_id}>
-            <Card className={classes.root} variant="outlined">
-      <CardContent className={classes.cardContent}>
-        <Typography className={classes.title} color="textPrimary" gutterBottom>
-          {project.title}
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          {project.language}
-        </Typography>
-        <Typography variant="body2" component="p">
-          {project.description}
-        </Typography>
-      </CardContent>
-      <CardActions className={classes.buttonContainer}>
-      <IconButton href={project.github} className={classes.icon}><AiFillGithub/></IconButton>
-      {project.link ? <IconButton href={project.link} className={classes.icon}><LanguageIcon/></IconButton> : false}
-      </CardActions>
-      
+      <Card className={classes.root} variant="outlined">
+        <CardContent className={classes.cardContent}>
+          <Typography className={classes.title} color="textPrimary" gutterBottom>
+            {project.title}
+          </Typography>
+          <Typography className={classes.pos} color="textSecondary">
+            {project.language}
+          </Typography>
+          <Typography variant="body2" component="p">
+            {project.description}
+          </Typography>
+        </CardContent>
+        <CardActions className={classes.buttonContainer}>
+        <IconButton href={project.github} className={classes.icon}><AiFillGithub/></IconButton>
+        {project.link ? <IconButton href={project.link} className={classes.icon}><LanguageIcon/></IconButton> : false}
+        </CardActions>
     </Card>
   );
 }
