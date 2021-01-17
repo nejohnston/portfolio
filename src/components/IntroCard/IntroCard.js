@@ -67,9 +67,9 @@ const IntroCard = () => {
         <NavLink to='/projects' className={classes.linkText}>
           <Button size="small">Projects</Button>
         </NavLink>
-        <NavLink to='/about' className={classes.linkText}>
+        {/* <NavLink to='/about' className={classes.linkText}>
           <Button size="small">About</Button>
-        </NavLink>
+        </NavLink> */}
       </CardActions>
       <div className={classes.buttonContainer}>
         <IconButton href="https://github.com/nejohnston/"  size="medium">

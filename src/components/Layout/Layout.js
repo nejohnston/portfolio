@@ -6,10 +6,10 @@ import HeaderBar from '../HeaderBar';
 import Footer from '../Footer';
 
 const Layout = ({ children }) => (
-  <div className='appContentWrapper'>
+  <div >
     <HeaderBar />
     <div className='appContent'>{children}</div>
-    <Footer />
+    {/* <Footer /> */}
   </div>
 );
 

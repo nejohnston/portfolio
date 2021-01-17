@@ -1,25 +1,18 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
-import { Typography } from '@material-ui/core';
-import IntroCard from '../IntroCard'
+import {GridList, Grid, Paper} from '@material-ui/core';
 import ProjectCard from './ProjectCard'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    // overflow: 'hidden'
+    justifyContent: 'space-around',
+    flexGrow: 1,
+    maxWidth: 1200
   },
-  gridList: {
-    // width: 800,
-    // height: 600
+  paper: {
+    height: 140,
+    width: 100,
   },
   icon: {
     color: 'rgba(0, 0, 0, 0.54)',
@@ -46,35 +39,20 @@ const useStyles = makeStyles((theme) => ({
 const ProjectsList = ({projects}) => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <GridList cols={4} spacing={30} cellHeight={180} className={classes.gridList}>
+    <Grid container justify="center" spacing={10} className={classes.root}>
         {/* <GridListTile key="Subheader" style={{ height: 'auto' }}>
           <ListSubheader component="div">Projects</ListSubheader>
         </GridListTile> */}
         {projects.map((project) => (
-          // <GridListTile key={project.node_id}>
-          //   {/* <img src={project.img} alt={project.title} /> */}
-          //   <GridListTileBar
-          //     title={project.name.replace('-', ' ').replace(/^(.)|\s+(.)/g, c => c.toUpperCase())}
-          //     subtitle={<span>Language: {project.language}</span>}
-          //     actionIcon={
-          //       <IconButton aria-label={`info about ${project.title}`} className={classes.icon}>
-          //         <InfoIcon />
-          //       </IconButton>
-          //     }
-          //   />
-          //   <GridListTileBar>
-          //     <Typography>
-          //       {project.description}
-          //     </Typography>
-          //   </GridListTileBar>
-          <GridListTile key={project.node_id}>
+          <Grid item key={project}>
+            {/* <Paper> */}
           <ProjectCard project={project}/>
+          {/* </Paper> */}
             
-          </GridListTile>
+          </Grid>
         ))}
-      </GridList>
-    </div>
+      {/* </Grid> */}
+    </Grid>
   );
 }
 

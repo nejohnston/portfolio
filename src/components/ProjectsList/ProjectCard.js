@@ -15,8 +15,8 @@ import {AiFillGithub} from 'react-icons/ai'
 const useStyles = makeStyles({
   cardContainer: {
     minWidth: 275,
-    maxWidth: 500,
-    height: "auto"
+    width: 300,
+    height: 200
   },
   // title: {
   //   fontSize: 30,
@@ -41,7 +41,7 @@ const IntroCard = ({project}) => {
   const classes = useStyles();
 
   return (
-      <Card className={classes.root} variant="outlined">
+      <Card className={classes.cardContainer} variant="outlined">
         <CardContent className={classes.cardContent}>
           <Typography className={classes.title} color="textPrimary" gutterBottom>
             {project.title}
@@ -52,11 +52,11 @@ const IntroCard = ({project}) => {
           <Typography variant="body2" component="p">
             {project.description}
           </Typography>
-        </CardContent>
         <CardActions className={classes.buttonContainer}>
         <IconButton href={project.github} className={classes.icon}><AiFillGithub/></IconButton>
         {project.link ? <IconButton href={project.link} className={classes.icon}><LanguageIcon/></IconButton> : false}
         </CardActions>
+        </CardContent>
     </Card>
   );
 }
