@@ -1,50 +1,50 @@
 [
   {
-    "title": "StudentsAgainstCorona Map",
-    "language": "Javascript, Firebase, Leaflet",
-    "image": "./assets/portfolio-sacmap",
-    "description": "",
+    "title": "Yahtzee",
+    "language": "Python",
+    "image": 0,
+    "description": "A two-player Yahtzee game played in the terminal.",
+    "link": "",
+    "github": "https://github.com/nejohnston/yahtzee"
+  },
+  {
+    "title": "Library Manager",
+    "language": "Python",
+    "image": 1,
+    "description": "A Python module replicating a librarian.",
+    "link": "",
+    "github": "https://github.com/nejohnston/library-manager"
+  },
+  {
+    "title": "COVID-19 Map",
+    "language": "React",
+    "image": 2,
+    "description": "A interactive map identifying StudentsAgainstCorona 26 cities acround the world.",
     "link": "https://againstcoronamap.web.app/",
-    "github": "çcovid-map"
+    "github": "https://github.com/nejohnston/covid-map"
   },
   {
     "title": "R10",
-    "language": "React Native, Firebase",
-    "image": "./assets/portfolio-R10",
-    "description": "React Native project for a RED Academy conference. Uses Redux state manager, Firebase database.",
+    "language": "React Native",
+    "image": 3,
+    "description": "An organization iOS app for the fictional conference, R10.",
     "link": "",
     "github": "https://github.com/nejohnston/R10"
   },
   {
-    "title": "Yahtzee",
-    "language": "Python, JSON, Git",
-    "image": "",
-    "description": "",
+    "title": "Boomtown",
+    "language": "React",
+    "image": 4,
+    "description": "A web app for users to share household items.",
     "link": "",
-    "github": ""
+    "github": "https://github.com/nejohnston/boomtown"
   },
   {
-    "title": "",
-    "language": "",
-    "image": "",
-    "description": "",
-    "link": "",
-    "github": ""
-  },
-  {
-    "title": "",
-    "language": "",
-    "image": "",
-    "description": "",
-    "link": "",
-    "github": ""
-  },
-  {
-    "title": "",
-    "language": "",
-    "image": "",
-    "description": "",
-    "link": "",
-    "github": ""
+    "title": "Exciting Platformer With Banger Music",
+    "language": "Unity/C#",
+    "image": 5,
+    "description": "A video game built for nwHacks 2021. First time using Unity and C#.",
+    "link": "https://play.unity.com/mg/other/exciting-platformer-with-banger-music",
+    "github": "https://github.com/nejohnston/nwHacks2021"
   }
 ]

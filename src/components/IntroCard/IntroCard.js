@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {Card, CardActions, CardContent, Button, IconButton, Typography, CardHeader, CardMedia} from '@material-ui/core';
+import {Card, CardActions, CardContent, Button, IconButton, Typography, CardMedia} from '@material-ui/core';
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai';
 import {NavLink} from 'react-router-dom'
 import profilePicture from '../../config/assets/images/sadie-and-i.png'
@@ -59,9 +59,6 @@ const IntroCard = () => {
         >
           Nicholas Johnston
         </Typography>
-        {/* <Typography color="textSecondary">
-          I'm passionate about snowboarding, coding, and my grandma's buttertarts!
-        </Typography> */}
       </CardContent>
       <CardActions className={classes.buttonContainer}>
         <NavLink to='/projects' className={classes.linkText}>

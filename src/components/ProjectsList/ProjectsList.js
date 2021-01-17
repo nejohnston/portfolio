@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {GridList, Grid, Paper} from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 import ProjectCard from './ProjectCard'
 
 const useStyles = makeStyles((theme) => ({
@@ -8,7 +8,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-around',
     flexGrow: 1,
-    maxWidth: 1200
+    maxWidth: 1200,
+    marginTop: 60
   },
   paper: {
     height: 140,
@@ -17,41 +18,21 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     color: 'rgba(0, 0, 0, 0.54)',
   },
+  gridItem: {
+    paddingBottom: "20px !important"
+  }
 }));
 
-/**
- * The example data is structured as follows:
- *
- * import image from 'path/to/image.jpg';
- * [etc...]
- *
- * const tileData = [
- *   {
- *     img: image,
- *     title: 'Image',
- *     author: 'author',
- *   },
- *   {
- *     [etc...]
- *   },
- * ];
- */
 const ProjectsList = ({projects}) => {
   const classes = useStyles();
+  const baseUrl = "../../components/assets/images/"
   return (
-    <Grid container justify="center" spacing={10} className={classes.root}>
-        {/* <GridListTile key="Subheader" style={{ height: 'auto' }}>
-          <ListSubheader component="div">Projects</ListSubheader>
-        </GridListTile> */}
+    <Grid container justify="center" className={classes.root}>
         {projects.map((project) => (
-          <Grid item key={project}>
-            {/* <Paper> */}
-          <ProjectCard project={project}/>
-          {/* </Paper> */}
-            
+          <Grid item className={classes.gridItem} key={project.title} imageUrl={project.image}>
+            <ProjectCard project={project} key={project}/>
           </Grid>
         ))}
-      {/* </Grid> */}
     </Grid>
   );
 }

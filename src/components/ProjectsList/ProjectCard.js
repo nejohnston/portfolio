@@ -1,48 +1,57 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
-import GridListTile from '@material-ui/core/GridList'
-import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
+import {IconButton, CardMedia, Card, CardActions, CardContent, Typography} from '@material-ui/core';
 import LanguageIcon from '@material-ui/icons/Language'
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import {NavLink} from 'react-router-dom'
 import {AiFillGithub} from 'react-icons/ai'
+import boomtownImage from '../../config/assets/images/portfolio-boomtown.png'
+import yahtzeeImage from '../../config/assets/images/yahtzee.jpeg'
+import libraryImage from '../../config/assets/images/portfolio-library.png'
+import sacMapImage from '../../config/assets/images/portfolio-sacmap.png'
+import unityImage from '../../config/assets/images/portfolio-unity.png'
+import r10Image from '../../config/assets/images/portfolio-r10.png'
+
 const useStyles = makeStyles({
   cardContainer: {
     minWidth: 275,
     width: 300,
-    height: 200
+    // height: 200
   },
-  // title: {
-  //   fontSize: 30,
-  // },
-  // pos: {
-  //   marginBottom: 12,
-  // },
-  // buttonContainer: {
-  //   display: 'flex',
-  //   justifyContent: 'space-around'
-  // },
+  cardContent: {
+    paddingBottom: 0
+  },
+  buttonContainer: {
+    display: 'flex',
+    justifyContent: 'space-around'
+  },
   icon: {
     color: 'rgba(0, 0, 0, 0.54)',
   },
-  // gridList: {
-  //   width: 800,
-  //   height: 600
-  // },
+  media: {
+    height: 0,
+    paddingTop: '56.25%', // 16:9
+    paddingLeft: 0,
+    paddingRight: 0
+  },
+  title: {
+    fontSize: 20,
+    paddingTop: 10
+  },
+  pos: {
+    paddingBottom: 10
+  }
 });
 
-const IntroCard = ({project}) => {
+const IntroCard = ({project, imageUrl}) => {
   const classes = useStyles();
-
+  const imageArray = [yahtzeeImage, libraryImage, sacMapImage, r10Image, boomtownImage, unityImage ]
+  
   return (
       <Card className={classes.cardContainer} variant="outlined">
         <CardContent className={classes.cardContent}>
+      <CardMedia
+      image={imageArray[project.image]}
+      className={classes.media} 
+      />
           <Typography className={classes.title} color="textPrimary" gutterBottom>
             {project.title}
           </Typography>
@@ -52,11 +61,11 @@ const IntroCard = ({project}) => {
           <Typography variant="body2" component="p">
             {project.description}
           </Typography>
+        </CardContent>
         <CardActions className={classes.buttonContainer}>
         <IconButton href={project.github} className={classes.icon}><AiFillGithub/></IconButton>
         {project.link ? <IconButton href={project.link} className={classes.icon}><LanguageIcon/></IconButton> : false}
         </CardActions>
-        </CardContent>
     </Card>
   );
 }
