@@ -36,7 +36,8 @@ const useStyles = makeStyles({
     height: 50
   },
   linkText: {
-    textDecoration: "none"
+    textDecoration: "none",
+    border: "1px solid"
   }
 });
 

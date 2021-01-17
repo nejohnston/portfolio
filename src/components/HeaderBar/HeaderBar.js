@@ -86,7 +86,7 @@ const HeaderBar = () => {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem>
+            {/* <MenuItem>
               <NavLink
                 to='about'
                 offset={-70}
@@ -96,7 +96,7 @@ const HeaderBar = () => {
               >
                 About
               </NavLink>
-            </MenuItem>
+            </MenuItem> */}
             <MenuItem>
               <NavLink
                 to='projects'
