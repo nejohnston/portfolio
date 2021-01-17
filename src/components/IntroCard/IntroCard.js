@@ -37,7 +37,8 @@ const useStyles = makeStyles({
   },
   linkText: {
     textDecoration: "none",
-    border: "1px solid"
+    border: "1px solid",
+    borderColor: "rgba(0, 0, 0, 0.3)"
   }
 });
 

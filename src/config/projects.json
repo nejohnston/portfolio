@@ -11,7 +11,7 @@
     "title": "Library Manager",
     "language": "Python",
     "image": 1,
-    "description": "A Python module replicating a librarian.",
+    "description": "A Python module that can search and move books in a .txt file.",
     "link": "",
     "github": "https://github.com/nejohnston/library-manager"
   },
@@ -19,7 +19,7 @@
     "title": "COVID-19 Map",
     "language": "React",
     "image": 2,
-    "description": "A interactive map identifying StudentsAgainstCorona 26 cities acround the world.",
+    "description": "An interactive map pinning Students Against Corona's international hubs.",
     "link": "https://againstcoronamap.web.app/",
     "github": "https://github.com/nejohnston/covid-map"
   },
@@ -43,7 +43,7 @@
     "title": "Exciting Platformer With Banger Music",
     "language": "Unity/C#",
     "image": 5,
-    "description": "A video game built for nwHacks 2021. First time using Unity and C#.",
+    "description": "A video game built for nwHacks 2021.",
     "link": "https://play.unity.com/mg/other/exciting-platformer-with-banger-music",
     "github": "https://github.com/nejohnston/nwHacks2021"
   }
