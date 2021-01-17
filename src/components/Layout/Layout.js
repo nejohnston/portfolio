@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
 
 import HeaderBar from '../HeaderBar';
-import Footer from '../Footer';
 
 const Layout = ({ children }) => (
   <div >

@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
 
 const ProjectsList = ({projects}) => {
   const classes = useStyles();
-  const baseUrl = "../../components/assets/images/"
   return (
     <Grid container justify="center" className={classes.root}>
         {projects.map((project) => (
