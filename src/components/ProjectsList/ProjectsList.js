@@ -2,14 +2,19 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {Grid} from '@material-ui/core';
 import ProjectCard from './ProjectCard'
+import { CardGroup } from 'react-bootstrap';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
-    justifyContent: 'space-around',
-    flexGrow: 1,
-    maxWidth: 1200,
-    paddingTop: 350
+    // width: '100vw',
+    display: 'grid',
+    justifyContent: 'space-evenly',
+    gridRowGap: 10,
+    gridColumnGap: 10,
+    gridTemplateColumns: '1fr 20px',
+    overflow: 'hidden'
+    // flexGrow: 1,
+    // maxWidth: '100%',
   },
   paper: {
     height: 140,
@@ -21,20 +26,26 @@ const useStyles = makeStyles((theme) => ({
   gridItem: {
     paddingBottom: "20px !important",
     overflowX: 'hidden'
+  },
+  jss1: {
+    // width: '100',
+    height: '0 !important'
   }
 }));
 
 const ProjectsList = ({projects}) => {
   const classes = useStyles();
   return (
-    <Grid container justify="center" className={classes.root}>
-    
+    <>
+    <CardGroup className={classes.root}>
+    {/* <div className={classes.root}> */}
         {projects.map((project) => (
-          // <Grid item className={classes.gridItem} key={project.title}>
+          <div className={classes.gridItem} key={project.title}>
             <ProjectCard project={project} key={project}/>
-          
+          </div>
         ))}
-    </Grid>
+    </CardGroup>
+    </>
   );
 }
 

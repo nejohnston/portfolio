@@ -1,9 +1,9 @@
 [
   {
     "title": "Sprout",
-    "language": "React + Node.js + PostgresQL + Express + Heroku",
+    "language": "React, Node, Postgres, Express, Heroku",
     "image": 6,
-    "description": "A web app for users to sign up their house plants and receive maintenance tips and reminders.",
+    "description": "Web app to sign up your house plants! Receive maintenance tips and reminders.",
     "link": "my-sprout.ca",
     "github": "https://github.com/nejohnston/comp-2800-team-dtc-03-sprout"
   },

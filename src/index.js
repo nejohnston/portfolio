@@ -9,11 +9,11 @@ import Layout from './components/Layout'
 
 const Portfolio = () => (
     <HashRouter>
-      {/* <Layout> */}
+      <Layout>
         <Route exact path='/' component={HomeContainer} />
         <Route path='/about' component={AboutContainer}/>
         <Route path='/projects' component={ProjectsContainer}/>
-      {/* </Layout> */}
+      </Layout>
     </HashRouter>
 )
 

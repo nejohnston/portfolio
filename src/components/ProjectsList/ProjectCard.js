@@ -58,7 +58,7 @@ const IntroCard = ({project}) => {
           <Typography className={classes.title} color="textPrimary" gutterBottom>
             {project.title}
           </Typography>
-          <Typography className={classes.pos} color="textSecondary">
+          <Typography variant="body2" component="p" className={classes.pos} color="textSecondary">
             {project.language}
           </Typography>
           <Typography variant="body2" component="p">
