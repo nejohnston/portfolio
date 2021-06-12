@@ -1,5 +1,13 @@
 [
   {
+    "title": "Sprout",
+    "language": "React + Node.js + PostgresQL + Express + Heroku",
+    "image": 6,
+    "description": "A web app for users to sign up their house plants and receive maintenance tips and reminders.",
+    "link": "my-sprout.ca",
+    "github": "https://github.com/nejohnston/comp-2800-team-dtc-03-sprout"
+  },
+  {
     "title": "Yahtzee",
     "language": "Python",
     "image": 0,
@@ -27,7 +35,7 @@
     "title": "R10",
     "language": "React Native",
     "image": 3,
-    "description": "An organization iOS app for the fictional conference, R10.",
+    "description": "An organizational iOS app for the fictional conference, R10.",
     "link": "",
     "github": "https://github.com/nejohnston/R10"
   },
