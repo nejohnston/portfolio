@@ -5,7 +5,6 @@ import ProjectsList from '../../components/ProjectsList'
 const useStyles = makeStyles({
   cardContainer: {
       width: '100vw',
-      height: '100vh',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center'

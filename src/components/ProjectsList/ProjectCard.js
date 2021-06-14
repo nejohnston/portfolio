@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {IconButton, CardMedia, Card, CardActions, CardContent, Typography, Paper} from '@material-ui/core';
+import {IconButton, CardMedia, Card, CardActions, CardContent, Typography} from '@material-ui/core';
 import LanguageIcon from '@material-ui/icons/Language'
 import {AiFillGithub} from 'react-icons/ai'
 import boomtownImage from '../../config/assets/images/portfolio-boomtown.png'
@@ -9,14 +9,12 @@ import libraryImage from '../../config/assets/images/portfolio-library.png'
 import sacMapImage from '../../config/assets/images/portfolio-sacmap.png'
 import unityImage from '../../config/assets/images/portfolio-unity.png'
 import r10Image from '../../config/assets/images/portfolio-r10.png'
-import sproutImage from '../..//config/assets/images/portfolio-sprout.png'
 
 const useStyles = makeStyles({
   cardContainer: {
     minWidth: 275,
     width: 300,
-    height: 350,
-    overflowX: 'hidden'
+    // height: 200
   },
   cardContent: {
     paddingBottom: 0
@@ -43,12 +41,11 @@ const useStyles = makeStyles({
   }
 });
 
-const IntroCard = ({project}) => {
+const IntroCard = ({project, imageUrl}) => {
   const classes = useStyles();
-  const imageArray = [yahtzeeImage, libraryImage, sacMapImage, r10Image, boomtownImage, unityImage, sproutImage]
+  const imageArray = [yahtzeeImage, libraryImage, sacMapImage, r10Image, boomtownImage, unityImage ]
   
   return (
-    <Paper>
       <Card className={classes.cardContainer} variant="outlined">
         <CardContent className={classes.cardContent}>
       <CardMedia
@@ -70,7 +67,6 @@ const IntroCard = ({project}) => {
         {project.link ? <IconButton href={project.link} className={classes.icon}><LanguageIcon/></IconButton> : false}
         </CardActions>
     </Card>
-    </Paper>
   );
 }
 
