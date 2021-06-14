@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {IconButton, CardMedia, Card, CardActions, CardContent, Typography, Paper} from '@material-ui/core';
+import {IconButton, CardMedia, Card, CardActions, CardContent, Typography, Paper, Grid} from '@material-ui/core';
 import LanguageIcon from '@material-ui/icons/Language'
 import {AiFillGithub} from 'react-icons/ai'
 import boomtownImage from '../../config/assets/images/portfolio-boomtown.png'
@@ -48,29 +48,41 @@ const IntroCard = ({project}) => {
   const imageArray = [yahtzeeImage, libraryImage, sacMapImage, r10Image, boomtownImage, unityImage, sproutImage]
   
   return (
-    <Paper>
       <Card className={classes.cardContainer} variant="outlined">
         <CardContent className={classes.cardContent}>
       <CardMedia
       image={imageArray[project.image]}
       className={classes.media} 
       />
-          <Typography className={classes.title} color="textPrimary" gutterBottom>
+          <Typography 
+          className={classes.title} 
+          color="textPrimary" 
+          gutterBottom>
             {project.title}
           </Typography>
-          <Typography variant="body2" component="p" className={classes.pos} color="textSecondary">
+          <Typography 
+          variant="body2" 
+          component="p" 
+          className={classes.pos} 
+          color="textSecondary">
             {project.language}
           </Typography>
-          <Typography variant="body2" component="p">
+          <Typography 
+          variant="body2" 
+          component="p">
             {project.description}
           </Typography>
         </CardContent>
         <CardActions className={classes.buttonContainer}>
-        <IconButton href={project.github} className={classes.icon}><AiFillGithub/></IconButton>
-        {project.link ? <IconButton href={project.link} className={classes.icon}><LanguageIcon/></IconButton> : false}
+        <IconButton href={project.github} className={classes.icon}>
+          <AiFillGithub/>
+          </IconButton>
+        {project.link ? 
+        <IconButton href={project.link} className={classes.icon}>
+          <LanguageIcon/>
+          </IconButton> : false}
         </CardActions>
     </Card>
-    </Paper>
   );
 }
 

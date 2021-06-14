@@ -11,7 +11,7 @@ const Portfolio = () => (
     <HashRouter>
       <Layout>
         <Route exact path='/' component={HomeContainer} />
-        <Route path='/about' component={AboutContainer}/>
+        {/* <Route path='/about' component={AboutContainer}/> */}
         <Route path='/projects' component={ProjectsContainer}/>
       </Layout>
     </HashRouter>

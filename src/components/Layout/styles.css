@@ -1,14 +1,13 @@
 .appContentWrapper {
-	/* display: flex; */
-	/* min-height: 100%; */
-	/* flex-direction: column; */
+	display: flex; 
+	min-height: 100%;
+	flex-direction: column;
 }
 
 .appContent {
-	/* display: grid;
-	margin: auto;
-	max-width: 1140px; */
+	/* display: grid; */
+	max-width: 1140px; 
+	box-sizing: border-box;
 	/* max-height: 100vh; */
-	/* width: 100%;
-	flex: 1; */
+	/* flex: 1; */
 }

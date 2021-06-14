@@ -4,10 +4,12 @@ import ProjectsList from '../../components/ProjectsList'
 
 const useStyles = makeStyles({
   cardContainer: {
-    //   width: '100%',
+    display: 'flex',
+    justifyContent: 'space-around',
+      width: '100%',
       marginTop: 90,
-    //   justifyContent: 'center',
-    //   alignItems: 'center'
+      // justifyContent: 'center',
+      // alignItems: 'center'
   }
 });
 
