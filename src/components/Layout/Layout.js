@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
   return (
   <div >
     <HeaderBar />
-      <div className={classes.appContent}>{children}</div>
+    <div className='appContent'>{children}</div>
     {/* <Footer /> */}
   </div>
 )};

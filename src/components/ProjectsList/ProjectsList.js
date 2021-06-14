@@ -5,19 +5,33 @@ import ProjectCard from './ProjectCard'
 import { CardGroup } from 'react-bootstrap';
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    // overflowX: 'hidden',
+    // overflowY: 'hidden',
+    // width: '100vw',
+    // maxHeight: '100vh',
+    // boxSizing: 'border-box',
+  },
+  paper: {
+    height: 140,
+    width: 100,
+  },
+  icon: {
+    color: 'rgba(0, 0, 0, 0.54)',
+  },
+  gridItem: {
+    paddingBottom: "20px !important"
+  }
 }));
 
 const ProjectsList = ({projects}) => {
   const classes = useStyles();
   return (
-    <Grid 
-    container 
-    spacing={10}
-    justify='space-evenly'
-    alignItems='center'
-    >
+    <Grid container justify="center" alignItems='center' className={classes.root}>
         {projects.map((project) => (
-          <Grid item key={project.title} xs={5}>
+          <Grid item className={classes.gridItem} key={project.title}>
             <ProjectCard project={project} key={project}/>
           </Grid>
         ))}

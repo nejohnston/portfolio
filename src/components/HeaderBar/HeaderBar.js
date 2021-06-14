@@ -15,9 +15,9 @@ import {NavLink} from 'react-router-dom'
 const useStyles = makeStyles({
   headerContainer: {
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#fff',
     color: '#fff',
-    overflow: 'hidden',
+    marginBottom: '10%'
   },
   header: {
     display: 'flex',
