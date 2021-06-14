@@ -7,13 +7,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     justifyContent: 'space-evenly',
-    flexGrow: 1,
-    overflowX: 'hidden',
-    overflowY: 'hidden',
-    maxWidth: '100vw',
-    maxHeight: '100vh',
-    // boxSizing: 'box-content',
-    marginTop: '10%'
+    // overflowX: 'hidden',
+    // overflowY: 'hidden',
+    // width: '100vw',
+    // maxHeight: '100vh',
+    // boxSizing: 'border-box',
+    marginTop: '80px'
   },
   paper: {
     height: 140,
@@ -30,9 +29,9 @@ const useStyles = makeStyles((theme) => ({
 const ProjectsList = ({projects}) => {
   const classes = useStyles();
   return (
-    <Grid container justify="center" className={classes.root} spacing={3}>
+    <Grid container justify="center" alignItems='center' className={classes.root} spacing={3}>
         {projects.map((project) => (
-          <Grid item key={project.title} imageUrl={project.image} xs={6}>
+          <Grid item key={project.title} imageUrl={project.image}>
             <ProjectCard project={project} key={project}/>
           </Grid>
         ))}

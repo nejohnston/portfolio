@@ -9,6 +9,7 @@ import libraryImage from '../../config/assets/images/portfolio-library.png'
 import sacMapImage from '../../config/assets/images/portfolio-sacmap.png'
 import unityImage from '../../config/assets/images/portfolio-unity.png'
 import r10Image from '../../config/assets/images/portfolio-r10.png'
+import sproutImage from '../../config/assets/images/portfolio-sprout.png'
 
 const useStyles = makeStyles({
   cardContainer: {
@@ -43,7 +44,7 @@ const useStyles = makeStyles({
 
 const IntroCard = ({project, imageUrl}) => {
   const classes = useStyles();
-  const imageArray = [yahtzeeImage, libraryImage, sacMapImage, r10Image, boomtownImage, unityImage ]
+  const imageArray = [yahtzeeImage, libraryImage, sacMapImage, r10Image, boomtownImage, unityImage, sproutImage ]
   
   return (
       <Card className={classes.cardContainer} variant="outlined">
