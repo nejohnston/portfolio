@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {Grid} from '@material-ui/core';
 import ProjectCard from './ProjectCard'
+import { CardGroup } from 'react-bootstrap';
 
 const useStyles = makeStyles((theme) => ({
   root: {

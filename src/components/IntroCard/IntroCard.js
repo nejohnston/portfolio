@@ -6,7 +6,7 @@ import {NavLink} from 'react-router-dom'
 import profilePicture from '../../config/assets/images/sadie-and-i.png'
 
 const useStyles = makeStyles({
-  root: {
+  rootCard: {
     minWidth: 275,
     width: 400,
   },
@@ -48,7 +48,7 @@ const IntroCard = () => {
 
   return (
     <Card 
-    className={classes.root} 
+    className={classes.rootCard} 
     variant="outlined"
     >
       <CardContent className={classes.cardContent}>
