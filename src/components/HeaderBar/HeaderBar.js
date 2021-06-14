@@ -16,7 +16,8 @@ const useStyles = makeStyles({
   headerContainer: {
     alignItems: 'center',
     backgroundColor: 'transparent',
-    color: '#fff'
+    color: '#fff',
+    marginBottom: '10%'
   },
   header: {
     display: 'flex',
