@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
     // width: '100vw',
     // maxHeight: '100vh',
     // boxSizing: 'border-box',
-    marginTop: '80px'
   },
   paper: {
     height: 140,
@@ -29,9 +28,9 @@ const useStyles = makeStyles((theme) => ({
 const ProjectsList = ({projects}) => {
   const classes = useStyles();
   return (
-    <Grid container justify="center" alignItems='center' className={classes.root} spacing={3}>
+    <Grid container justify="center" alignItems='center' className={classes.root}>
         {projects.map((project) => (
-          <Grid item key={project.title} imageUrl={project.image}>
+          <Grid item className={classes.gridItem} key={project.title}>
             <ProjectCard project={project} key={project}/>
           </Grid>
         ))}
