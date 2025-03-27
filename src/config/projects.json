@@ -9,22 +9,6 @@
 
   },
   {
-    "title": "Yahtzee",
-    "language": "Python",
-    "image": 0,
-    "description": "A two-player Yahtzee game played in the terminal.",
-    "link": "",
-    "github": "https://github.com/nejohnston/yahtzee"
-  },
-  {
-    "title": "Library Manager",
-    "language": "Python",
-    "image": 1,
-    "description": "A Python module that can search and move books in a .txt file.",
-    "link": "",
-    "github": "https://github.com/nejohnston/library-manager"
-  },
-  {
     "title": "COVID-19 Map",
     "language": "React",
     "image": 2,
@@ -33,27 +17,9 @@
     "github": "https://github.com/nejohnston/covid-map"
   },
   {
-    "title": "R10",
-    "language": "React Native",
-    "image": 3,
-    "description": "An organization iOS app for the fictional conference, R10.",
-    "link": "",
-    "github": "https://github.com/nejohnston/R10"
-  },
-  {
-    "title": "Boomtown",
-    "language": "React",
-    "image": 4,
-    "description": "A web app for users to share household items.",
-    "link": "",
-    "github": "https://github.com/nejohnston/boomtown"
-  },
-  {
-    "title": "Exciting Platformer With Banger Music",
-    "language": "Unity/C#",
-    "image": 5,
-    "description": "A video game built for nwHacks 2021.",
-    "link": "https://play.unity.com/mg/other/exciting-platformer-with-banger-music",
-    "github": "https://github.com/nejohnston/nwHacks2021"
+    "title": "Bluum",
+    "language":  "Golang, Docker, React Native, Node,js, Redux",
+    "image": null,
+    "description": "A mobile app connected to a Debian ThinkBox computer running a Docker container. The computer is connected, through wifi, to a Soil Moisture sensor communicating with the docker MQTT instance."
   }
 ]
